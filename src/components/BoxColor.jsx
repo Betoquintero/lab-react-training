@@ -11,14 +11,16 @@ export default function BoxColor (props) {
 
   b = Math.floor(Math.random() * 255)
 
+  const backColor={
+    backgroundColor:`rgb(${r},${g},${b})`
+  }
+
 
 
 
    return (
-    <div className='card'>
+    <div style={backColor} className='card'>
     <p>rgb ({r},{g},{b})</p>    
     </div>
   )
 }
-
-// style= {'background-color=rgb'+'('+{r}+','+{g}+','+{b}+')'}
