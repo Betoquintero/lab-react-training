@@ -1,6 +1,8 @@
 import './App.css';
 import IdCard from './components/IdCard'
 import Greetings from './components/Greetings'
+import Random from './components/Random'
+import BoxColor from './components/BoxColor'
 import image1 from './assets/images/image1.jpg';
 import image2 from './assets/images/image2.jpg';
 
@@ -33,6 +35,20 @@ function App() {
       children:'Puma'
     }
   ]
+  const random = [
+    {
+      min:'',
+      max:''
+    },
+  ]
+
+  const boxColor = [
+    {
+      r:'',
+      g:'',
+      b:'',     
+    },
+  ]
   return (
     <div className="App">
           <h1>Lab webpage</h1>
@@ -43,6 +59,13 @@ function App() {
       <section className="cards">
         <Greetings greetings={greetings[0]}></Greetings>
         <Greetings greetings={greetings[1]}></Greetings>
+      </section>
+      <section className="cards">
+        <Random random={random[0]}></Random>       
+      </section>
+      <section className="cards">
+        <BoxColor boxColor={boxColor[0]}></BoxColor>
+        <BoxColor boxColor={boxColor[0]}></BoxColor>        
       </section>
     </div>
   );
