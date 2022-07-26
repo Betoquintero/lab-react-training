@@ -1,4 +1,6 @@
 import React from 'react'
+import image1 from '../assets/images/image1.jpg';
+import image2 from '../assets/images/image2.jpg';
 
 
 export default function IdCard(props) {
@@ -10,7 +12,7 @@ export default function IdCard(props) {
    return (
     <div className= 'card'>
     <div className= 'innerCard'>
-        <imgage src= {picture} alt='client picture' />
+        <img width='100px' src= {picture} alt='client picture' />
         <ul>
             <li>First name: {firstName}</li>
             <li>Last name: {lastName}</li>

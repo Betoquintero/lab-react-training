@@ -8,6 +8,8 @@ import Rating from './components/Rating'
 import DriverCard from './components/DriverCard'
 import image1 from './assets/images/image1.jpg';
 import image2 from './assets/images/image2.jpg';
+import image3 from './assets/images/image3.jpg';
+import image4 from './assets/images/image4.jpg';
 
 function App() {
   const clients = [
@@ -93,14 +95,20 @@ function App() {
     {
       name: 'Travis Kalanick',
       rating: '4.2',
-      img: '3',
-      car: '2021',
+      img: image3,
+      car: {
+        model:"Toyota Corolla Atlis",
+        licensePlate: "C042DE"
+      }
     },
     {
       name: 'Dara Khosrowshahi',
       rating: '4.9',
-      img: '3',
-      car: '2021',
+      img: image4,
+      car: {
+        model:"Audi A3",
+        licensePlate: "BE33ER"
+      },
     },
   ]
   return (
@@ -121,7 +129,7 @@ function App() {
         <BoxColor boxColor={boxColor[0]}></BoxColor>
         <BoxColor boxColor={boxColor[0]}></BoxColor>        
       </section>
-      <section className="cards">
+      <section className="creditCard">
         <CreditCard creditCard={creditCard[0]}></CreditCard>
         <CreditCard creditCard={creditCard[1]}></CreditCard>
         <CreditCard creditCard={creditCard[2]}></CreditCard>
@@ -129,7 +137,7 @@ function App() {
       <section className="cards">
         <Rating rating={rating[0]}></Rating>       
       </section>
-      <section className="cards">
+      <section className="">
         <DriverCard driverCard={driverCard[0]}></DriverCard>
         <DriverCard driverCard={driverCard[1]}></DriverCard>
       </section>
