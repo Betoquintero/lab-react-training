@@ -6,10 +6,26 @@ import BoxColor from './components/BoxColor'
 import CreditCard from './components/CreditCard'
 import Rating from './components/Rating'
 import DriverCard from './components/DriverCard'
+import LikeButton from './components/LikeButton'
+import Dice from './components/Dice';
+import ClickablePicture from './components/ClickablePicture';
+import Carousel from './components/Carousel'
+import NumbersTable from './components/NumbersTable';
+import Facebook from './components/Facebook';
 import image1 from './assets/images/image1.jpg';
 import image2 from './assets/images/image2.jpg';
 import image3 from './assets/images/image3.jpg';
 import image4 from './assets/images/image4.jpg';
+import maxence from './assets/images/maxence.png';
+import shades from './assets/images/maxence-glasses.png';
+import emptyDice from './assets/images/dice-empty.png';
+import dice1 from './assets/images/dice1.png';
+import dice2 from './assets/images/dice2.png';
+import dice3 from './assets/images/dice3.png';
+import dice4 from './assets/images/dice4.png';
+import dice5 from './assets/images/dice5.png';
+import dice6 from './assets/images/dice6.png';
+
 
 function App() {
   const clients = [
@@ -140,6 +156,31 @@ function App() {
       <section className="">
         <DriverCard driverCard={driverCard[0]}></DriverCard>
         <DriverCard driverCard={driverCard[1]}></DriverCard>
+      </section>
+      <section>
+        <LikeButton />
+      </section>
+      <section>
+      <ClickablePicture img={maxence} clickedImage={shades}/>
+      </section>
+      <section>
+        <Dice emptyDice={emptyDice} dice1={dice1} dice2={dice2} dice3={dice3} dice4={dice4} dice5={dice5} dice6={dice6} />
+      </section>
+      <section>
+      <Carousel
+  images={[
+    'https://randomuser.me/api/portraits/women/1.jpg',
+    'https://randomuser.me/api/portraits/men/1.jpg',
+    'https://randomuser.me/api/portraits/women/2.jpg',
+    'https://randomuser.me/api/portraits/men/2.jpg'
+  ]}
+/>
+      </section>
+      <section>
+      <NumbersTable limit={12} />
+      </section>
+      <section>
+        <Facebook />
       </section>
     </div>
   );

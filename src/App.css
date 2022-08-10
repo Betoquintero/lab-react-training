@@ -91,6 +91,13 @@ div.card {
   margin:0px
 }
 
+.boxes{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: solid;
+}
+
 
 
 
